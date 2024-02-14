@@ -16,3 +16,8 @@ while True:
     frame_1=np.array(image)
     frame=cv2.cvtColor(frame_1,cv2.COLOR_BGR2RGB)
     output.write(frame)
+    c_time=time.time()
+    if c_time>end_time:
+        break
+output.release()
+print("--END--")
